@@ -1,11 +1,10 @@
-
-const express = require('express');
+const express = require("express");
 const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.get('/', (req: any, res: any) => {
+app.get("/api", (req: any, res: any) => {
   try {
     res.send({ name: "hoge" });
   } catch (error) {
@@ -17,6 +16,6 @@ app.get('/', (req: any, res: any) => {
 app.listen({ port: 3000 }, () => {
   console.log(`Server ready at http://localhost:3000`);
 });
-console.log('starts');
+console.log("starts");
 
 export default app;
