@@ -1,17 +1,48 @@
-﻿# express_2021ts_pub
+﻿# Deploy express on ts-node env to Heroku server
 
- Version: 0.9.1
+## How to use
 
- Author  : Kouji Nakashima / kuc-arc-f.com
+1. Clone this repository and Install dependency
 
- date    : 2021/11/07
+```
+git clone
+npm install
+```
 
-***
+2. Set up Heroku environment
 
-express + typescript, vercel deploy sample
+Heroku account is needed. Please sign one up for this application.
 
-***
-### blog
+1. Install [heroku CLI](https://devcenter.heroku.com/articles/heroku-cli)
 
-***
+```
+brew tap heroku/brew && brew install heroku
+```
 
+2. Remove existing git repo and create a new one
+
+```
+rm -rf .git
+git init
+```
+
+2. Log into Heroku account and create a new project
+
+```
+heroku login
+heroku create <project name>
+```
+
+3. Make sure the heroku remote exists
+
+```
+git remote -v
+```
+
+4. Push code to heroku server to deploy
+
+```
+git add .
+git commit -m"Init project"
+git push heroku master
+```
