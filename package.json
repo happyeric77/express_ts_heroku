@@ -1,7 +1,6 @@
 {
   "scripts": {
     "start": "ts-node src/index.ts",
-    "build": "rimraf dist && tsc",
     "deploy": "npm run build && vercel --prod"
   },
   "devDependencies": {
